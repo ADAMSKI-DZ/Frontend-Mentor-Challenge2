@@ -3,7 +3,7 @@
 ## Challenge solving series 🤜
 
 the second **challenge** felt little bit harder<br>
-but i finish it
+but I finish it
 
 ### Social media
 
