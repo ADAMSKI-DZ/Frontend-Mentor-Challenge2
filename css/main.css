@@ -1,0 +1,246 @@
+/*--- roots ---*/
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+/*--- reset ---*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: var(--Light-grayish-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+/*--- all codes ---*/
+.container {
+  width: 80vw;
+  height: 80vh;
+  display: grid;
+  grid-template-rows: 55% 45%;
+  grid-template-areas:
+    "card1 card1 card2 card3"
+    "card4 card5 card5 card3";
+  grid-gap: 15px;
+}
+.attribution {
+  position: absolute;
+  left: 50%;
+  bottom: 3vh;
+  transform: translate(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: var(--Very-dark-blackish-blue);
+}
+.attribution a {
+  color: var(--Moderate-violet);
+}
+
+/*--- cards ---*/
+.card {
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card .parsonal {
+  display: flex;
+  width: 100%;
+  padding-top: 24px;
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+.card .parsonal img {
+  width: 30px;
+  border-radius: 50%;
+}
+.card .parsonal .infos {
+  margin-left: 16px;
+}
+.card .parsonal .infos .par {
+  color: var(--Light-gray);
+  font-weight: 600;
+  font-size: 13px;
+}
+.card .parsonal .infos .lice {
+  margin-top: 2px;
+  opacity: 50%;
+}
+.card .title {
+  color: var(--White);
+  width: 90%;
+  margin-top: 15px;
+}
+.card .descreption {
+  color: var(--Light-gray);
+  opacity: 70%;
+  width: 90%;
+  padding-top: 20px;
+  font-size: 15px;
+  font-weight: 500;
+}
+/*--- card 1 ---*/
+.card1 {
+  grid-area: card1;
+  background-color: var(--Moderate-violet);
+}
+.card1 .parsonal img {
+  border: 2px solid var(--Light-gray);
+}
+/*--- card 2 ---*/
+.card2 {
+  grid-area: card2;
+  background-color: var(--Very-dark-grayish-blue);
+}
+.card2 .title {
+  width: 70%;
+  font-size: 23px;
+  position: relative;
+  left: -20px;
+}
+.card2 .descreption {
+  width: 80%;
+  font-size: 16px;
+}
+/*--- card 3 ---*/
+.card3 {
+  grid-area: card3;
+  background-color: var(--White);
+}
+.card3 .parsonal .infos .par {
+  color: var(--Very-dark-grayish-blue);
+}
+.card3 .title {
+  color: var(--Very-dark-grayish-blue);
+}
+.card3 .title {
+  width: 70%;
+  position: relative;
+  left: -20px;
+}
+.card3 .descreption {
+  color: var(--Very-dark-blackish-blue);
+  opacity: 50%;
+  width: 70%;
+  position: relative;
+  left: -20px;
+  top: 10px;
+}
+/*--- card 4 ---*/
+.card4 {
+  grid-area: card4;
+  background-color: var(--White);
+}
+.card4 .parsonal .infos .par {
+  color: var(--Very-dark-grayish-blue);
+}
+.card4 .title {
+  color: var(--Very-dark-grayish-blue);
+}
+.card4 .title {
+  width: 65%;
+  font-size: 23px;
+  position: relative;
+  left: -25px;
+}
+.card4 .descreption {
+  color: var(--Very-dark-blackish-blue);
+  opacity: 50%;
+  width: 70%;
+  position: relative;
+  left: -20px;
+}
+/*--- card 5 ---*/
+.card5 {
+  grid-area: card5;
+  background-color: var(--Very-dark-blackish-blue);
+}
+.card5 .parsonal img {
+  border: 2px solid var(--Moderate-violet);
+}
+
+/*--- responsive ---*/
+
+@media only screen and (max-width: 1350px) {
+  .card .descreption {
+    padding-top: 0px;
+    font-size: 12px;
+  }
+  .card .title {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body {
+    height: 100%;
+  }
+  .container {
+    width: 80vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    width: 80%;
+    margin-top: 1em;
+  }
+  .card1 {
+    height: 444px;
+  }
+  .card2 {
+    height: 300px;
+  }
+  .card3 {
+    height: 480px;
+  }
+  .card4 {
+    height: 270px;
+  }
+  .card5 {
+    height: 438px;
+  }
+  .card .title {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .card .descreption {
+    padding-top: 20px;
+    font-size: 15px;
+  }
+  .card3 .descreption {
+    width: 90%;
+    padding-top: 0;
+    left: 0;
+  }
+  .attribution {
+    position: relative;
+  }
+}
